@@ -1,0 +1,7 @@
+/target/
+/out/
+/.idea/
+/atlassian-ide-plugin.xml
+/FashionManagerClient.iml
+/**/src/main/resources/rebel.xml
+*.iml
