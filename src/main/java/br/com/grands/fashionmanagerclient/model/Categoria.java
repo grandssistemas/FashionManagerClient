@@ -1,13 +1,18 @@
 package br.com.grands.fashionmanagerclient.model;
 
 
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  * Created by gelatti on 17/10/16.
  */
 public class Categoria {
 
+    @ApiModelProperty(value = "ID da categoria", position = 1)
     private Long id;
+    @ApiModelProperty(value = "Nome da categoria", position = 2)
     private String nome;
+    @ApiModelProperty(value = "Tipo de produto que esta categoria possui", position = 3)
     private TipoProduto tipoProduto;
 
     public Long getId() {

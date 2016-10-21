@@ -1,6 +1,8 @@
 package br.com.grands.fashionmanagerclient.model;
 
 
+import io.swagger.annotations.ApiModelProperty;
+
 import java.math.BigDecimal;
 
 /**
@@ -9,20 +11,38 @@ import java.math.BigDecimal;
 
 public class Produto {
 
+    @ApiModelProperty(value = "Id do produto", position = 1)
     private Long id;
+    @ApiModelProperty(value = "Nome do produto", position = 2)
     private String nome;
+    @ApiModelProperty(value = "Preço do produto", position = 3)
     private BigDecimal preco;
+    @ApiModelProperty(value = "Código de barras do produto", position = 4)
     private String barras;
+    @ApiModelProperty(value = "Código NCM do produto", position = 5)
     private String ncm;
+    @ApiModelProperty(value = "Código CEST do produto", position = 6)
     private String cest;
+    @ApiModelProperty(value = "Grupo Fiscal do produto", position = 7)
     private GrupoFiscalProduto grupoFiscalProduto;
+    @ApiModelProperty(value = "Valor de IPI do produto", position = 8)
     private BigDecimal vlIpi;
+    @ApiModelProperty(value = "Código de IPI do produto", position = 9)
     private String tipoIpi;
+    @ApiModelProperty(value = "Código de ORIGEM do produto", position = 10)
     private String origem;
+    @ApiModelProperty(value = "Status de ativo do produto TRUE ou FALSE", position = 11)
     private Boolean status;
+    @ApiModelProperty(value = "Departamento do produto", position = 12)
     private Departamento departamento;
+    @ApiModelProperty(value = "Quantidade em estoque do produto", position = 13)
     private BigDecimal estoque;
-    private Combustivel combustivel;
+    @ApiModelProperty(value = "Código da agencia nacional do petroleo para caso o produto for combustível", position = 14)
+    private String codigoANP;
+    @ApiModelProperty(value = "Percentual de gás natural no produto para combustiveis", position = 15)
+    private BigDecimal percentualGasNatural;
+    @ApiModelProperty(value = "Código do CODIF para combustiveis", position = 16)
+    private String codif;
 
     public Long getId() {
         return id;
@@ -128,12 +148,28 @@ public class Produto {
         this.estoque = estoque;
     }
 
-    public Combustivel getCombustivel() {
-        return combustivel;
+    public String getCodigoANP() {
+        return codigoANP;
     }
 
-    public void setCombustivel(Combustivel combustivel) {
-        this.combustivel = combustivel;
+    public void setCodigoANP(String codigoANP) {
+        this.codigoANP = codigoANP;
+    }
+
+    public BigDecimal getPercentualGasNatural() {
+        return percentualGasNatural;
+    }
+
+    public void setPercentualGasNatural(BigDecimal percentualGasNatural) {
+        this.percentualGasNatural = percentualGasNatural;
+    }
+
+    public String getCodif() {
+        return codif;
+    }
+
+    public void setCodif(String codif) {
+        this.codif = codif;
     }
 
     @Override

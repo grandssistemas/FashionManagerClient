@@ -1,13 +1,19 @@
 package br.com.grands.fashionmanagerclient.model;
 
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  * Created by gelatti on 17/10/16.
  */
 public class Departamento {
 
+    @ApiModelProperty(value = "Id do departamento", position = 1)
     private Long id;
+    @ApiModelProperty(value = "Nome do departamento", position = 2)
     private String nome;
+    @ApiModelProperty(value = "Categoria que este departamento possui", position = 3)
     private Categoria categoria;
 
     public Long getId() {
