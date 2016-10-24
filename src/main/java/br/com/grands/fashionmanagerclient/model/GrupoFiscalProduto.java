@@ -8,7 +8,7 @@ import io.swagger.annotations.ApiModelProperty;
  */
 public class GrupoFiscalProduto {
 
-    @ApiModelProperty(value = "Id do grupo fiscal do produto", position = 1)
+    @ApiModelProperty(value = "Id do grupo fiscal do produto do software que esta usando integração", position = 1)
     private Long id;
     @ApiModelProperty(value = "Nome do grupo fiscal de produto", position = 2)
     private String nome;

@@ -9,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
  */
 public class Departamento {
 
-    @ApiModelProperty(value = "Id do departamento", position = 1)
+    @ApiModelProperty(value = "Id do departamento do software que esta usando integração", position = 1)
     private Long id;
     @ApiModelProperty(value = "Nome do departamento", position = 2)
     private String nome;

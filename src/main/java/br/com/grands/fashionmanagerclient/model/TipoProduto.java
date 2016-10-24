@@ -8,7 +8,7 @@ import io.swagger.annotations.ApiModelProperty;
  */
 public class TipoProduto {
 
-    @ApiModelProperty(value = "Id do tipo de produto", position = 1)
+    @ApiModelProperty(value = "Id do tipo de produto do software que esta usando integração", position = 1)
     private Long id;
     @ApiModelProperty(value = "Nome do tipo de produto", position = 2)
     private String nome;

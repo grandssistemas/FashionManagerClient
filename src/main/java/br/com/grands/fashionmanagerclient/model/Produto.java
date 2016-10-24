@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 
 public class Produto {
 
-    @ApiModelProperty(value = "Id do produto", position = 1)
+    @ApiModelProperty(value = "Id do produto do software que esta usando integração", position = 1)
     private Long id;
     @ApiModelProperty(value = "Nome do produto", position = 2)
     private String nome;

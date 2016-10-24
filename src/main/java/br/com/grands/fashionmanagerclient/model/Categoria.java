@@ -8,7 +8,7 @@ import io.swagger.annotations.ApiModelProperty;
  */
 public class Categoria {
 
-    @ApiModelProperty(value = "ID da categoria", position = 1)
+    @ApiModelProperty(value = "ID da categoria do software que esta usando integração", position = 1)
     private Long id;
     @ApiModelProperty(value = "Nome da categoria", position = 2)
     private String nome;
