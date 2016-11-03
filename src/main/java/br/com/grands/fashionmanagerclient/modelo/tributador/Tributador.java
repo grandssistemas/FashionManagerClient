@@ -31,6 +31,8 @@ public class Tributador {
     private Cofins cofins;
     @ApiModelProperty(value = "Grupo de tributação de IPI para a tributação", position = 10)
     private Ipi ipi;
+    @ApiModelProperty(value = "Nome da tributação", position = 11)
+    private String nome;
 
     public Long getId() {
         return id;
@@ -106,6 +108,14 @@ public class Tributador {
 
     public Ipi getIpi() {
         return ipi;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public void setIpi(Ipi ipi) {
