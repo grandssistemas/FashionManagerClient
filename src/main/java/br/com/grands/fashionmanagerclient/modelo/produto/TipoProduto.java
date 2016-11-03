@@ -1,4 +1,4 @@
-package br.com.grands.fashionmanagerclient.model;
+package br.com.grands.fashionmanagerclient.modelo.produto;
 
 
 import io.swagger.annotations.ApiModelProperty;
@@ -6,14 +6,12 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * Created by gelatti on 17/10/16.
  */
-public class Categoria {
+public class TipoProduto {
 
-    @ApiModelProperty(value = "ID da categoria do software que esta usando integração", position = 1)
+    @ApiModelProperty(value = "Id do tipo de produto do software que esta usando integração", position = 1)
     private Long id;
-    @ApiModelProperty(value = "Nome da categoria", position = 2)
+    @ApiModelProperty(value = "Nome do tipo de produto", position = 2)
     private String nome;
-    @ApiModelProperty(value = "Tipo de produto que esta categoria possui", position = 3)
-    private TipoProduto tipoProduto;
 
     public Long getId() {
         return id;
@@ -29,14 +27,6 @@ public class Categoria {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public TipoProduto getTipoProduto() {
-        return tipoProduto;
-    }
-
-    public void setTipoProduto(TipoProduto tipoProduto) {
-        this.tipoProduto = tipoProduto;
     }
 
     @Override

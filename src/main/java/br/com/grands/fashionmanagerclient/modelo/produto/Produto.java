@@ -1,4 +1,4 @@
-package br.com.grands.fashionmanagerclient.model;
+package br.com.grands.fashionmanagerclient.modelo.produto;
 
 
 import io.swagger.annotations.ApiModelProperty;
