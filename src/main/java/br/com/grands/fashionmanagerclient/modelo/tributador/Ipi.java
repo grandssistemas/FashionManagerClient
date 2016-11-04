@@ -21,4 +21,62 @@ public class Ipi {
     private BigDecimal pIPI;
     @ApiModelProperty(value = "Mensagem que ira aparecer nas informações adicionais da nota", position = 6)
     private String mensagem;
+
+    public String getCST() {
+        return CST;
+    }
+
+    public void setCST(String CST) {
+        this.CST = CST;
+    }
+
+    public String getIpiCalculationType() {
+        return ipiCalculationType;
+    }
+
+    public void setIpiCalculationType(String ipiCalculationType) {
+        this.ipiCalculationType = ipiCalculationType;
+    }
+
+    public String getvIPI() {
+        return vIPI;
+    }
+
+    public void setvIPI(String vIPI) {
+        this.vIPI = vIPI;
+    }
+
+    public String getvBC() {
+        return vBC;
+    }
+
+    public void setvBC(String vBC) {
+        this.vBC = vBC;
+    }
+
+    public BigDecimal getpIPI() {
+        return pIPI;
+    }
+
+    public void setpIPI(BigDecimal pIPI) {
+        this.pIPI = pIPI;
+    }
+
+    public String getMensagem() {
+        return mensagem;
+    }
+
+    public void setMensagem(String mensagem) {
+        this.mensagem = mensagem;
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
 }
