@@ -9,7 +9,7 @@ import java.math.BigDecimal;
  */
 public class Pis {
 
-    @ApiModelProperty(value = "CST que esta relacionado ao grupo de tributação", position = 1)
+    @ApiModelProperty(value = "CST que esta relacionado ao grupo de tributação", position = 1, required = true)
     private String CST;
     @ApiModelProperty(value = "Nome da formula para o valor da base de calculo do PIS", position = 2)
     private String vBC;

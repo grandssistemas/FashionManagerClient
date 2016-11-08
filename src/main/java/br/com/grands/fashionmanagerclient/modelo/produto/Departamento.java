@@ -10,9 +10,9 @@ public class Departamento {
 
     @ApiModelProperty(value = "Id do departamento do software que esta usando integração", position = 1)
     private Long id;
-    @ApiModelProperty(value = "Nome do departamento", position = 2)
+    @ApiModelProperty(value = "Nome do departamento", position = 2, required = true)
     private String nome;
-    @ApiModelProperty(value = "Categoria que este departamento possui", position = 3)
+    @ApiModelProperty(value = "Categoria que este departamento possui", position = 3, required = true)
     private Categoria categoria;
 
     public Long getId() {

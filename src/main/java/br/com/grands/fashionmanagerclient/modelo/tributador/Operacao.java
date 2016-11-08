@@ -9,7 +9,7 @@ public class Operacao {
 
     @ApiModelProperty(value = "Id da operação do software que esta usando integração", position = 1)
     private Long id;
-    @ApiModelProperty(value = "Nome da operação", position = 2)
+    @ApiModelProperty(value = "Nome da operação", position = 2, required = true)
     private String nome;
 
     public Long getId() {

@@ -9,7 +9,7 @@ public class GrupoFiscalPessoa {
 
     @ApiModelProperty(value = "Id do grupo fiscal de pessoa do software que esta usando integração", position = 1)
     private Long id;
-    @ApiModelProperty(value = "Nome do grupo fiscal de pessoa", position = 2)
+    @ApiModelProperty(value = "Nome do grupo fiscal de pessoa", position = 2, required = true)
     private String nome;
 
     public Long getId() {

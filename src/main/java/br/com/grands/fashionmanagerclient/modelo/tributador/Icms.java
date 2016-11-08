@@ -9,7 +9,7 @@ import java.math.BigDecimal;
  */
 public class Icms {
 
-    @ApiModelProperty(value = "CFOP que esta relacionado ao grupo de tributação", position = 1)
+    @ApiModelProperty(value = "CFOP que esta relacionado ao grupo de tributação", position = 1, required = true)
     private String cfop;
     @ApiModelProperty(value = "CST que esta relacionado ao grupo de tributação", position = 2)
     private String CST;

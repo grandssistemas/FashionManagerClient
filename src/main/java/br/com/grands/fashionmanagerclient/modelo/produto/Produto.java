@@ -13,7 +13,7 @@ public class Produto {
 
     @ApiModelProperty(value = "Id do produto do software que esta usando integração", position = 1)
     private Long id;
-    @ApiModelProperty(value = "Nome do produto", position = 2)
+    @ApiModelProperty(value = "Nome do produto", position = 2, required = true)
     private String nome;
     @ApiModelProperty(value = "Preço do produto", position = 3)
     private BigDecimal preco;
@@ -23,7 +23,7 @@ public class Produto {
     private String ncm;
     @ApiModelProperty(value = "Código CEST do produto", position = 6)
     private String cest;
-    @ApiModelProperty(value = "Grupo Fiscal do produto", position = 7)
+    @ApiModelProperty(value = "Grupo Fiscal do produto", position = 7, required = true)
     private GrupoFiscalProduto grupoFiscalProduto;
     @ApiModelProperty(value = "Valor de IPI do produto", position = 8)
     private BigDecimal vlIpi;
@@ -33,7 +33,7 @@ public class Produto {
     private String origem;
     @ApiModelProperty(value = "Status de ativo do produto TRUE ou FALSE", position = 11)
     private Boolean status;
-    @ApiModelProperty(value = "Departamento do produto", position = 12)
+    @ApiModelProperty(value = "Departamento do produto", position = 12, required = true)
     private Departamento departamento;
     @ApiModelProperty(value = "Quantidade em estoque do produto", position = 13)
     private BigDecimal estoque;

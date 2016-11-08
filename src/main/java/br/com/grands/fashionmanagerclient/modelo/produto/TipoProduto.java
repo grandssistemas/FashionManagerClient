@@ -10,7 +10,7 @@ public class TipoProduto {
 
     @ApiModelProperty(value = "Id do tipo de produto do software que esta usando integração", position = 1)
     private Long id;
-    @ApiModelProperty(value = "Nome do tipo de produto", position = 2)
+    @ApiModelProperty(value = "Nome do tipo de produto", position = 2, required = true)
     private String nome;
 
     public Long getId() {

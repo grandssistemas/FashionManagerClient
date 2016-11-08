@@ -13,15 +13,15 @@ public class Tributador {
 
     @ApiModelProperty(value = "Id da tributação do software que esta usando integração", position = 1)
     private Long id;
-    @ApiModelProperty(value = "Lista de operações que estão ligadas a tributação", position = 2)
+    @ApiModelProperty(value = "Lista de operações que estão ligadas a tributação", position = 2, required = true)
     private List<Operacao> operacao;
-    @ApiModelProperty(value = "Lista de siglas de estados de origem para tributação", position = 3)
+    @ApiModelProperty(value = "Lista de siglas de estados de origem para tributação", position = 3, required = true)
     private List<String> origem;
-    @ApiModelProperty(value = "Lista de siglas de estados de destino para tributação", position = 4)
+    @ApiModelProperty(value = "Lista de siglas de estados de destino para tributação", position = 4, required = true)
     private List<String> destino;
-    @ApiModelProperty(value = "Lista de grupos fiscais de pessoa para tributação", position = 5)
+    @ApiModelProperty(value = "Lista de grupos fiscais de pessoa para tributação", position = 5, required = true)
     private List<GrupoFiscalPessoa> grupoFiscalPessoa;
-    @ApiModelProperty(value = "Lista de grupos fiscais de produto para tributação", position = 6)
+    @ApiModelProperty(value = "Lista de grupos fiscais de produto para tributação", position = 6, required = true)
     private List<GrupoFiscalProduto> grupoFiscalProduto;
     @ApiModelProperty(value = "Grupo de tributação de ICMS para a tributação", position = 7)
     private Icms icms;
@@ -31,7 +31,7 @@ public class Tributador {
     private Cofins cofins;
     @ApiModelProperty(value = "Grupo de tributação de IPI para a tributação", position = 10)
     private Ipi ipi;
-    @ApiModelProperty(value = "Nome da tributação", position = 11)
+    @ApiModelProperty(value = "Nome da tributação", position = 11, required = true)
     private String nome;
 
     public Long getId() {

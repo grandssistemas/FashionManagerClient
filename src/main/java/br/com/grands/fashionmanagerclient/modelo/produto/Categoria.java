@@ -10,9 +10,9 @@ public class Categoria {
 
     @ApiModelProperty(value = "ID da categoria do software que esta usando integração", position = 1)
     private Long id;
-    @ApiModelProperty(value = "Nome da categoria", position = 2)
+    @ApiModelProperty(value = "Nome da categoria", position = 2, required = true)
     private String nome;
-    @ApiModelProperty(value = "Tipo de produto que esta categoria possui", position = 3)
+    @ApiModelProperty(value = "Tipo de produto que esta categoria possui", position = 3, required = true)
     private TipoProduto tipoProduto;
 
     public Long getId() {

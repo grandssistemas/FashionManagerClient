@@ -9,7 +9,7 @@ import java.math.BigDecimal;
  */
 public class Ipi {
 
-    @ApiModelProperty(value = "CST que esta relacionado ao grupo de tributação", position = 1)
+    @ApiModelProperty(value = "CST que esta relacionado ao grupo de tributação", position = 1, required = true)
     private String CST;
     @ApiModelProperty(value = "Tipo de unidade para o calculo do IPI", position = 2)
     private String ipiCalculationType;

@@ -29,7 +29,7 @@ public class Cofins {
     private BigDecimal pCOFINSST;
     @ApiModelProperty(value = "Mensagem que ira aparecer nas informações adicionais da nota", position = 10)
     private String mensagem;
-    @ApiModelProperty(value = "CST que esta relacionado ao grupo de tributação", position = 11)
+    @ApiModelProperty(value = "CST que esta relacionado ao grupo de tributação", position = 11, required = true)
     private String CST;
 
     public String getvBC() {
