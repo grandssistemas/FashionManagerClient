@@ -12,6 +12,15 @@ public class GrupoFiscalPessoa {
     @ApiModelProperty(value = "Nome do grupo fiscal de pessoa", position = 2, required = true)
     private String nome;
 
+    public GrupoFiscalPessoa(){
+
+    }
+
+    public GrupoFiscalPessoa(Long id, String nome){
+        this.id = id;
+        this.nome = nome;
+    }
+
     public Long getId() {
         return id;
     }

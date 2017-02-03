@@ -35,8 +35,8 @@ public class Pessoa {
     private String razao;
     @ApiModelProperty(value = "Nome fantasia da pessoa, caso ela seja pessoa jurídica", position = 14)
     private String fantasia;
-    @ApiModelProperty(value = "Papel da pessoa. Valores válidos: ['CLIENTE','FORNECEDOR','FUNCIONARIO']",position = 15, required = true)
-    private String papel;
+    @ApiModelProperty(value = "Lista de papéis da pessoa. Valores válidos: ['CLIENTE','FORNECEDOR','FUNCIONARIO']",position = 15, required = true)
+    private List<String> papel;
     @ApiModelProperty(value = "Lista de endereços da pessoa, deve conter pelo menos 1 endereço. O primeiro endereço será considerado o endereço principal", position = 16)
     private List<Endereco> endereco;
     @ApiModelProperty(value = "Lista de emails da pessoa, deve conter pelo menos 1 email. O primeiro email será considerado o email principal", position = 17)
@@ -156,13 +156,6 @@ public class Pessoa {
         this.fantasia = fantasia;
     }
 
-    public String getPapel() {
-        return papel;
-    }
-
-    public void setPapel(String papel) {
-        this.papel = papel;
-    }
 
     public List<Endereco> getEndereco() {
         return endereco;
@@ -186,5 +179,13 @@ public class Pessoa {
 
     public void setTelefone(List<String> telefone) {
         this.telefone = telefone;
+    }
+
+    public List<String> getPapel() {
+        return papel;
+    }
+
+    public void setPapel(List<String> papel) {
+        this.papel = papel;
     }
 }
