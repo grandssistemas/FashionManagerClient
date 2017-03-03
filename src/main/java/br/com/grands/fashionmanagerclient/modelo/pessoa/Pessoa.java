@@ -44,6 +44,9 @@ public class Pessoa {
     @ApiModelProperty(value = "Lista de telefones da pessoa, deve conter pelo menos 1 telefone. O primeiro telefone será considerado o telefone principal", position = 18)
     private List<String> telefone;
 
+    @ApiModelProperty(value = "Lista de locais de faturamento. O primeiro local será considerado o principal", position = 18)
+    private List<LocalFaturamento> localFaturamento;
+
     public Long getId() {
         return id;
     }
@@ -187,5 +190,13 @@ public class Pessoa {
 
     public void setPapel(List<String> papel) {
         this.papel = papel;
+    }
+
+    public List<LocalFaturamento> getLocalFaturamento() {
+        return localFaturamento;
+    }
+
+    public void setLocalFaturamento(List<LocalFaturamento> localFaturamento) {
+        this.localFaturamento = localFaturamento;
     }
 }
