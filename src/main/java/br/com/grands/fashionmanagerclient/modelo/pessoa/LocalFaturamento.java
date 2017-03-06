@@ -9,7 +9,7 @@ public class LocalFaturamento {
     private Long id;
     @ApiModelProperty(value = "Nome do local de faturamento", position = 2, required = true)
     private String nome;
-    @ApiModelProperty(value = "Documento associado ao local de faturamento", position = 3, required = true)
+    @ApiModelProperty(value = "Documento associado ao local de faturamento. Exemplo: Inscrição rural", position = 3)
     private String documento;
     @ApiModelProperty(value = "Endereço do local de faturamento", position = 4, required = true)
     private Endereco endereco;
