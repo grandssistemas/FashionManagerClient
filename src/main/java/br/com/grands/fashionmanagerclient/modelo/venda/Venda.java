@@ -4,6 +4,7 @@ import io.swagger.annotations.ApiModelProperty;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -23,7 +24,7 @@ public class Venda {
 
     @DateTimeFormat(pattern = "dd/MM/yyyy HH:mm")
     @ApiModelProperty(value = "Data/hora da venda.", position = 6)
-    private BigDecimal dataVenda;
+    private Date dataVenda;
     @ApiModelProperty(value = "Documento do cliente, cnpj caso seja juridica e cpf caso seja fisica.", position = 7)
     private String docCliente;
     @ApiModelProperty(value = "Numero da venda, caso tenha nota emitida para esse venda irá o numero de emissão dela.", position = 8)
@@ -33,7 +34,7 @@ public class Venda {
     @ApiModelProperty(value = "Tipo do cliente: 'FISICA' ou 'JURIDICA'.", position = 10)
     private String tipoCliente;
     @ApiModelProperty(value = "Tipo de emissão da nota emitida (SEFAZ).", position = 11)
-    private String tpEmis;
+    private Integer tpEmis;
     @ApiModelProperty(value = "Lista de itens de venda.", position = 12)
     private List<ItemVenda> itens;
     @ApiModelProperty(value = "Lista de pagamentos.", position = 13)
@@ -80,11 +81,11 @@ public class Venda {
         this.valorAcrecimo = valorAcrecimo;
     }
 
-    public BigDecimal getDataVenda() {
+    public Date getDataVenda() {
         return dataVenda;
     }
 
-    public void setDataVenda(BigDecimal dataVenda) {
+    public void setDataVenda(Date dataVenda) {
         this.dataVenda = dataVenda;
     }
 
@@ -120,11 +121,11 @@ public class Venda {
         this.tipoCliente = tipoCliente;
     }
 
-    public String getTpEmis() {
+    public Integer getTpEmis() {
         return tpEmis;
     }
 
-    public void setTpEmis(String tpEmis) {
+    public void setTpEmis(Integer tpEmis) {
         this.tpEmis = tpEmis;
     }
 

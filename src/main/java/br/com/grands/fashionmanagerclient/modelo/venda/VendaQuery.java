@@ -18,7 +18,7 @@ public class VendaQuery {
     @ApiModelProperty(value = "Data de fim do periodo.", position = 1)
     private Date fimPeriodo;
     @ApiModelProperty(value = "Indica o status da venda que será retornado (SALVA|FINALIZADA|CANCELADA).", position = 1)
-    private List<String> status;
+    private List<TipoStatus> status;
     @ApiModelProperty(value = "Indica se quer vendas com ou sem emissão fiscal, caso passe nulo.", position = 1)
     private Boolean comEmissao;
 
@@ -39,11 +39,11 @@ public class VendaQuery {
         this.fimPeriodo = fimPeriodo;
     }
 
-    public List<String> getStatus() {
+    public List<TipoStatus> getStatus() {
         return status;
     }
 
-    public void setStatus(List<String> status) {
+    public void setStatus(List<TipoStatus> status) {
         this.status = status;
     }
 

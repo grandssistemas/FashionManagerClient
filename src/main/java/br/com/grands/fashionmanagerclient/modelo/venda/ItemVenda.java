@@ -19,21 +19,21 @@ public class ItemVenda {
     @ApiModelProperty(value = "Codigo de barras do produto vendido.", position = 5)
     private String barras;
     @ApiModelProperty(value = "Valor do desconto aplicado no item (UN).", position = 6)
-    private String desconto;
+    private BigDecimal desconto;
     @ApiModelProperty(value = "Valor liquido do produto obtido com : (valor liquido unitario * quantidade vendida).", position = 7)
     private BigDecimal valorLiquido;
     @ApiModelProperty(value = "Identificador Bico.", position = 8)
-    private Long idBico;
+    private String idBico;
     @ApiModelProperty(value = "Numero do tanque.", position = 9)
-    private Long numTanque;
+    private String numTanque;
     @ApiModelProperty(value = "Numero da bomba.", position = 10)
-    private Long numBomba;
+    private String numBomba;
     @ApiModelProperty(value = "Numero do bico da bomba.", position = 11)
-    private Long numBicoBomba;
+    private String numBicoBomba;
     @ApiModelProperty(value = "Encerrante inicial.", position = 12)
-    private Long encerranteInicial;
+    private String encerranteInicial;
     @ApiModelProperty(value = "Encerrante final.", position = 13)
-    private Long encerranteFinal;
+    private String encerranteFinal;
 
     @ApiModelProperty(value = "Valor da aliquota do ICMS.", position = 14)
     private String pICMS;
@@ -68,6 +68,7 @@ public class ItemVenda {
     private String cstIPI;
     @ApiModelProperty(value = "Codigo de enquadramento do IPI (SEFAZ).", position = 27)
     private String cEnq;
+
 
     public Long getCodProduto() {
         return codProduto;
@@ -109,11 +110,11 @@ public class ItemVenda {
         this.barras = barras;
     }
 
-    public String getDesconto() {
+    public BigDecimal getDesconto() {
         return desconto;
     }
 
-    public void setDesconto(String desconto) {
+    public void setDesconto(BigDecimal desconto) {
         this.desconto = desconto;
     }
 
@@ -125,51 +126,51 @@ public class ItemVenda {
         this.valorLiquido = valorLiquido;
     }
 
-    public Long getIdBico() {
+    public String getIdBico() {
         return idBico;
     }
 
-    public void setIdBico(Long idBico) {
+    public void setIdBico(String idBico) {
         this.idBico = idBico;
     }
 
-    public Long getNumTanque() {
+    public String getNumTanque() {
         return numTanque;
     }
 
-    public void setNumTanque(Long numTanque) {
+    public void setNumTanque(String numTanque) {
         this.numTanque = numTanque;
     }
 
-    public Long getNumBomba() {
+    public String getNumBomba() {
         return numBomba;
     }
 
-    public void setNumBomba(Long numBomba) {
+    public void setNumBomba(String numBomba) {
         this.numBomba = numBomba;
     }
 
-    public Long getNumBicoBomba() {
+    public String getNumBicoBomba() {
         return numBicoBomba;
     }
 
-    public void setNumBicoBomba(Long numBicoBomba) {
+    public void setNumBicoBomba(String numBicoBomba) {
         this.numBicoBomba = numBicoBomba;
     }
 
-    public Long getEncerranteInicial() {
+    public String getEncerranteInicial() {
         return encerranteInicial;
     }
 
-    public void setEncerranteInicial(Long encerranteInicial) {
+    public void setEncerranteInicial(String encerranteInicial) {
         this.encerranteInicial = encerranteInicial;
     }
 
-    public Long getEncerranteFinal() {
+    public String getEncerranteFinal() {
         return encerranteFinal;
     }
 
-    public void setEncerranteFinal(Long encerranteFinal) {
+    public void setEncerranteFinal(String encerranteFinal) {
         this.encerranteFinal = encerranteFinal;
     }
 

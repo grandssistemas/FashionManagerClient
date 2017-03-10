@@ -3,6 +3,7 @@ package br.com.grands.fashionmanagerclient.modelo.venda;
 import io.swagger.annotations.ApiModelProperty;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 /**
@@ -15,7 +16,7 @@ public class ValorPagamento {
     @ApiModelProperty(value = "Numero do cheque.", position = 2)
     private String numCheque;
     @ApiModelProperty(value = "Valor do pagamento.", position = 3)
-    private String valorPagamento;
+    private BigDecimal valorPagamento;
     @DateTimeFormat(pattern = "dd/MM/yyyy HH:mm")
     @ApiModelProperty(value = "Data de vencimento.", position = 4)
     private Date dataVencimento;
@@ -45,11 +46,11 @@ public class ValorPagamento {
         this.numCheque = numCheque;
     }
 
-    public String getValorPagamento() {
+    public BigDecimal getValorPagamento() {
         return valorPagamento;
     }
 
-    public void setValorPagamento(String valorPagamento) {
+    public void setValorPagamento(BigDecimal valorPagamento) {
         this.valorPagamento = valorPagamento;
     }
 
