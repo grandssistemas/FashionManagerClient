@@ -39,4 +39,108 @@ public class Venda {
     @ApiModelProperty(value = "Lista de pagamentos.", position = 13)
     private List<ValorPagamento> pagamentos;
 
+
+    public Long getNumPdv() {
+        return numPdv;
+    }
+
+    public void setNumPdv(Long numPdv) {
+        this.numPdv = numPdv;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public BigDecimal getValorBruto() {
+        return valorBruto;
+    }
+
+    public void setValorBruto(BigDecimal valorBruto) {
+        this.valorBruto = valorBruto;
+    }
+
+    public BigDecimal getValorDesconto() {
+        return valorDesconto;
+    }
+
+    public void setValorDesconto(BigDecimal valorDesconto) {
+        this.valorDesconto = valorDesconto;
+    }
+
+    public BigDecimal getValorAcrecimo() {
+        return valorAcrecimo;
+    }
+
+    public void setValorAcrecimo(BigDecimal valorAcrecimo) {
+        this.valorAcrecimo = valorAcrecimo;
+    }
+
+    public BigDecimal getDataVenda() {
+        return dataVenda;
+    }
+
+    public void setDataVenda(BigDecimal dataVenda) {
+        this.dataVenda = dataVenda;
+    }
+
+    public String getDocCliente() {
+        return docCliente;
+    }
+
+    public void setDocCliente(String docCliente) {
+        this.docCliente = docCliente;
+    }
+
+    public String getNumVenda() {
+        return numVenda;
+    }
+
+    public void setNumVenda(String numVenda) {
+        this.numVenda = numVenda;
+    }
+
+    public String getCodOperador() {
+        return codOperador;
+    }
+
+    public void setCodOperador(String codOperador) {
+        this.codOperador = codOperador;
+    }
+
+    public String getTipoCliente() {
+        return tipoCliente;
+    }
+
+    public void setTipoCliente(String tipoCliente) {
+        this.tipoCliente = tipoCliente;
+    }
+
+    public String getTpEmis() {
+        return tpEmis;
+    }
+
+    public void setTpEmis(String tpEmis) {
+        this.tpEmis = tpEmis;
+    }
+
+    public List<ItemVenda> getItens() {
+        return itens;
+    }
+
+    public void setItens(List<ItemVenda> itens) {
+        this.itens = itens;
+    }
+
+    public List<ValorPagamento> getPagamentos() {
+        return pagamentos;
+    }
+
+    public void setPagamentos(List<ValorPagamento> pagamentos) {
+        this.pagamentos = pagamentos;
+    }
 }

@@ -29,4 +29,67 @@ public class ValorPagamento {
     @ApiModelProperty(value = "Conta do cheque.", position = 8)
     private String contaCheque;
 
+    public String gettPag() {
+        return tPag;
+    }
+
+    public void settPag(String tPag) {
+        this.tPag = tPag;
+    }
+
+    public String getNumCheque() {
+        return numCheque;
+    }
+
+    public void setNumCheque(String numCheque) {
+        this.numCheque = numCheque;
+    }
+
+    public String getValorPagamento() {
+        return valorPagamento;
+    }
+
+    public void setValorPagamento(String valorPagamento) {
+        this.valorPagamento = valorPagamento;
+    }
+
+    public Date getDataVencimento() {
+        return dataVencimento;
+    }
+
+    public void setDataVencimento(Date dataVencimento) {
+        this.dataVencimento = dataVencimento;
+    }
+
+    public String getNumBanco() {
+        return numBanco;
+    }
+
+    public void setNumBanco(String numBanco) {
+        this.numBanco = numBanco;
+    }
+
+    public String getDocCliente() {
+        return docCliente;
+    }
+
+    public void setDocCliente(String docCliente) {
+        this.docCliente = docCliente;
+    }
+
+    public String getAgenciaCheque() {
+        return agenciaCheque;
+    }
+
+    public void setAgenciaCheque(String agenciaCheque) {
+        this.agenciaCheque = agenciaCheque;
+    }
+
+    public String getContaCheque() {
+        return contaCheque;
+    }
+
+    public void setContaCheque(String contaCheque) {
+        this.contaCheque = contaCheque;
+    }
 }

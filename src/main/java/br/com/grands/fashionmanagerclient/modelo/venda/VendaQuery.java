@@ -22,4 +22,36 @@ public class VendaQuery {
     @ApiModelProperty(value = "Indica se quer vendas com ou sem emissão fiscal, caso passe nulo.", position = 1)
     private Boolean comEmissao;
 
+
+    public Date getInicioPeriodo() {
+        return inicioPeriodo;
+    }
+
+    public void setInicioPeriodo(Date inicioPeriodo) {
+        this.inicioPeriodo = inicioPeriodo;
+    }
+
+    public Date getFimPeriodo() {
+        return fimPeriodo;
+    }
+
+    public void setFimPeriodo(Date fimPeriodo) {
+        this.fimPeriodo = fimPeriodo;
+    }
+
+    public List<String> getStatus() {
+        return status;
+    }
+
+    public void setStatus(List<String> status) {
+        this.status = status;
+    }
+
+    public Boolean getComEmissao() {
+        return comEmissao;
+    }
+
+    public void setComEmissao(Boolean comEmissao) {
+        this.comEmissao = comEmissao;
+    }
 }
