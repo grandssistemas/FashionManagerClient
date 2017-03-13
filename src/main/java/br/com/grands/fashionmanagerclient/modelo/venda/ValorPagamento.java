@@ -1,5 +1,6 @@
 package br.com.grands.fashionmanagerclient.modelo.venda;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -17,7 +18,8 @@ public class ValorPagamento {
     private String numCheque;
     @ApiModelProperty(value = "Valor do pagamento.", position = 3)
     private BigDecimal valorPagamento;
-    @DateTimeFormat(pattern = "dd/MM/yyyy HH:mm")
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
+    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "dd/MM/yyyy")
     @ApiModelProperty(value = "Data de vencimento.", position = 4)
     private Date dataVencimento;
 

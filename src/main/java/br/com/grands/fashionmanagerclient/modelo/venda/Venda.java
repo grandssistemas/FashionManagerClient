@@ -1,5 +1,6 @@
 package br.com.grands.fashionmanagerclient.modelo.venda;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -11,24 +12,25 @@ import java.util.List;
  * Created by rafael on 10/03/17.
  */
 public class Venda {
-    @ApiModelProperty(value = "Numero do pdv que foi realizado o faturamento.", position = 1)
+    @ApiModelProperty(value = "Id da venda no MobiAge, pode ser utilizado para busca de venda por id", position = 1)
+    private Long id;
+    @ApiModelProperty(value = "Numero do pdv que foi realizado o faturamento.", position = 2)
     private Long numPdv;
-    @ApiModelProperty(value = "Status da venda, quando possuir nota informa o status fornecido pela receita.", position = 2)
+    @ApiModelProperty(value = "Status da venda, quando possuir nota informa o status fornecido pela receita.", position = 3)
     private String status;
-    @ApiModelProperty(value = "Valor bruto da venda, sem o desconto.", position = 3)
+    @ApiModelProperty(value = "Valor bruto da venda, sem o desconto.", position = 4)
     private BigDecimal valorBruto;
-    @ApiModelProperty(value = "Valor de desconto da venda.", position = 4)
+    @ApiModelProperty(value = "Valor de desconto da venda.", position = 5)
     private BigDecimal valorDesconto;
-    @ApiModelProperty(value = "Valor de acrecimo da venda.", position = 5)
+    @ApiModelProperty(value = "Valor de acrecimo da venda.", position = 6)
     private BigDecimal valorAcrecimo;
 
     @DateTimeFormat(pattern = "dd/MM/yyyy HH:mm")
-    @ApiModelProperty(value = "Data/hora da venda.", position = 6)
+    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "dd/MM/yyyy HH:mm")
+    @ApiModelProperty(value = "Data/hora da venda.", position = 7)
     private Date dataVenda;
-    @ApiModelProperty(value = "Documento do cliente, cnpj caso seja juridica e cpf caso seja fisica.", position = 7)
+    @ApiModelProperty(value = "Documento do cliente, cnpj caso seja juridica e cpf caso seja fisica.", position = 8)
     private String docCliente;
-    @ApiModelProperty(value = "Numero da venda, caso tenha nota emitida para esse venda irá o numero de emissão dela.", position = 8)
-    private String numVenda;
     @ApiModelProperty(value = "Identificador do operador passado no campo id quando cadastrado, caso esse operador não foi cadastrado por integrção será informado o identificador no sistema.", position = 9)
     private String codOperador;
     @ApiModelProperty(value = "Tipo do cliente: 'FISICA' ou 'JURIDICA'.", position = 10)
@@ -39,6 +41,8 @@ public class Venda {
     private List<ItemVenda> itens;
     @ApiModelProperty(value = "Lista de pagamentos.", position = 13)
     private List<ValorPagamento> pagamentos;
+    @ApiModelProperty(value = "Numero da venda, caso tenha nota emitida para esse venda irá o numero de emissão dela.", position = 14)
+    private String numVenda;
 
 
     public Long getNumPdv() {
@@ -97,12 +101,12 @@ public class Venda {
         this.docCliente = docCliente;
     }
 
-    public String getNumVenda() {
-        return numVenda;
+    public Long getId() {
+        return id;
     }
 
-    public void setNumVenda(String numVenda) {
-        this.numVenda = numVenda;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getCodOperador() {
@@ -143,5 +147,13 @@ public class Venda {
 
     public void setPagamentos(List<ValorPagamento> pagamentos) {
         this.pagamentos = pagamentos;
+    }
+
+    public String getNumVenda() {
+        return numVenda;
+    }
+
+    public void setNumVenda(String numVenda) {
+        this.numVenda = numVenda;
     }
 }
