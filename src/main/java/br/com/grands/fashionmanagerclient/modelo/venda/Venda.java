@@ -43,6 +43,8 @@ public class Venda {
     private List<ValorPagamento> pagamentos;
     @ApiModelProperty(value = "Numero da venda, caso tenha nota emitida para esse venda irá o numero de emissão dela.", position = 14)
     private String numVenda;
+    @ApiModelProperty(value = "Numero da chave da (NFe/NFCe) emitida a partir da venda.", position = 14)
+    private String chaveDoc;
 
 
     public Long getNumPdv() {
@@ -155,5 +157,13 @@ public class Venda {
 
     public void setNumVenda(String numVenda) {
         this.numVenda = numVenda;
+    }
+
+    public String getChaveDoc() {
+        return chaveDoc;
+    }
+
+    public void setChaveDoc(String chaveDoc) {
+        this.chaveDoc = chaveDoc;
     }
 }

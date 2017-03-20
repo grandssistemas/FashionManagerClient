@@ -69,6 +69,51 @@ public class ItemVenda {
     @ApiModelProperty(value = "Codigo de enquadramento do IPI (SEFAZ).", position = 27)
     private String cEnq;
 
+    @ApiModelProperty(value = "Valor da base de calculo do ICMS.", position = 28)
+    private String vBCICMS;
+    @ApiModelProperty(value = "Valor da base de calculo do PIS.", position = 29)
+    private String vBCPIS;
+    @ApiModelProperty(value = "Valor da base de calculo do COFINS.", position = 30)
+    private String vBCCOFINS;
+    @ApiModelProperty(value = "Valor da base de calculo do IPI.", position = 31)
+    private String vBCIPI;
+
+    @ApiModelProperty(value = "Valor unitário do item.", position = 31)
+    private BigDecimal valorUnitario;
+
+
+
+    public String getvBCCOFINS() {
+        return vBCCOFINS;
+    }
+
+    public void setvBCCOFINS(String vBCCOFINS) {
+        this.vBCCOFINS = vBCCOFINS;
+    }
+
+    public String getvBCICMS() {
+        return vBCICMS;
+    }
+
+    public void setvBCICMS(String vBCICMS) {
+        this.vBCICMS = vBCICMS;
+    }
+
+    public String getvBCPIS() {
+        return vBCPIS;
+    }
+
+    public void setvBCPIS(String vBCPIS) {
+        this.vBCPIS = vBCPIS;
+    }
+
+    public String getvBCIPI() {
+        return vBCIPI;
+    }
+
+    public void setvBCIPI(String vBCIPI) {
+        this.vBCIPI = vBCIPI;
+    }
 
     public Long getCodProduto() {
         return codProduto;
@@ -284,5 +329,13 @@ public class ItemVenda {
 
     public void setcEnq(String cEnq) {
         this.cEnq = cEnq;
+    }
+
+    public BigDecimal getValorUnitario() {
+        return valorUnitario;
+    }
+
+    public void setValorUnitario(BigDecimal valorUnitario) {
+        this.valorUnitario = valorUnitario;
     }
 }
