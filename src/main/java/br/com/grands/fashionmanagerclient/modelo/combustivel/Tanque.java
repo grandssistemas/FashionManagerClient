@@ -16,7 +16,8 @@ public class Tanque {
 
     @ApiModelProperty(value = "Lista de combustíveis presentes no tanque." +
             " Este campo deve conter os Ids dos produtos do tipo combustivel no sistema que está realizando a integração. " +
-            " São aceitos somente produtos que tenham o bloco de dados de combustivel (Código ANP, percentual de gás natural e CODIF) preenchido")
+            " Esta lista deve conter pelo menos um elemento e são aceitos somente produtos que tenham o bloco de dados de combustivel " +
+            "(Código ANP, percentual de gás natural e CODIF) preenchido", required = true, position = 4)
     private List<Long> combustiveis;
 
     public Tanque() {
