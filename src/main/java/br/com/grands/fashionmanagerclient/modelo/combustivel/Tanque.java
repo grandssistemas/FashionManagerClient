@@ -11,7 +11,7 @@ public class Tanque {
 
     @ApiModelProperty(value = "Nome do tanque", required = true, position = 2)
     private String nome;
-    @ApiModelProperty(value = "Número do tanque", required = true, position = 3)
+    @ApiModelProperty(value = "Número do tanque. Este número deve ser único por organização", required = true, position = 3)
     private String numero;
 
     @ApiModelProperty(value = "Lista de combustíveis presentes no tanque." +

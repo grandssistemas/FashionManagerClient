@@ -11,7 +11,7 @@ public class Bomba {
     @ApiModelProperty(value = "Nome da bomba de combustivel", required = true, position = 2)
     private String nome;
 
-    @ApiModelProperty(value = "Número da bomba de combustível", required = true, position = 3)
+    @ApiModelProperty(value = "Número da bomba de combustível. Este número deve ser único por organização", required = true, position = 3)
     private String numero;
 
 

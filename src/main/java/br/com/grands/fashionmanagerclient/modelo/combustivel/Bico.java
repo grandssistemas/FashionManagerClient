@@ -17,7 +17,7 @@ public class Bico {
             "São aceito somente produtos que estejam relacionados ao tanque informado.", required = true, position = 4)
     private Long idProduto;
 
-    @ApiModelProperty(value = "Número do bico", required = true, position = 5)
+    @ApiModelProperty(value = "Número do bico. Este número deve ser único por organização", required = true, position = 5)
     private Long numero;
 
     public Bico() {
