@@ -13,86 +13,22 @@ import java.util.Date;
 public class ValorPagamento {
 
     @ApiModelProperty(value = "Forma de pagamento (SEFAZ).", position = 1)
-    private String tPag;
+    public String tPag;
     @ApiModelProperty(value = "Numero do cheque.", position = 2)
-    private String numCheque;
+    public String numCheque;
     @ApiModelProperty(value = "Valor do pagamento.", position = 3)
-    private BigDecimal valorPagamento;
+    public BigDecimal valorPagamento;
     @DateTimeFormat(pattern = "dd/MM/yyyy")
     @JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "dd/MM/yyyy")
     @ApiModelProperty(value = "Data de vencimento.", position = 4)
-    private Date dataVencimento;
+    public Date dataVencimento;
 
     @ApiModelProperty(value = "Numero do banco.", position = 5)
-    private String numBanco;
+    public String numBanco;
     @ApiModelProperty(value = "Documento do cliente, CPF para pessoa fisica e CNPJ para pessoa juridica.", position = 6)
-    private String docCliente;
+    public String docCliente;
     @ApiModelProperty(value = "Agência do cheque.", position = 7)
-    private String agenciaCheque;
+    public String agenciaCheque;
     @ApiModelProperty(value = "Conta do cheque.", position = 8)
-    private String contaCheque;
-
-    public String gettPag() {
-        return tPag;
-    }
-
-    public void settPag(String tPag) {
-        this.tPag = tPag;
-    }
-
-    public String getNumCheque() {
-        return numCheque;
-    }
-
-    public void setNumCheque(String numCheque) {
-        this.numCheque = numCheque;
-    }
-
-    public BigDecimal getValorPagamento() {
-        return valorPagamento;
-    }
-
-    public void setValorPagamento(BigDecimal valorPagamento) {
-        this.valorPagamento = valorPagamento;
-    }
-
-    public Date getDataVencimento() {
-        return dataVencimento;
-    }
-
-    public void setDataVencimento(Date dataVencimento) {
-        this.dataVencimento = dataVencimento;
-    }
-
-    public String getNumBanco() {
-        return numBanco;
-    }
-
-    public void setNumBanco(String numBanco) {
-        this.numBanco = numBanco;
-    }
-
-    public String getDocCliente() {
-        return docCliente;
-    }
-
-    public void setDocCliente(String docCliente) {
-        this.docCliente = docCliente;
-    }
-
-    public String getAgenciaCheque() {
-        return agenciaCheque;
-    }
-
-    public void setAgenciaCheque(String agenciaCheque) {
-        this.agenciaCheque = agenciaCheque;
-    }
-
-    public String getContaCheque() {
-        return contaCheque;
-    }
-
-    public void setContaCheque(String contaCheque) {
-        this.contaCheque = contaCheque;
-    }
+    public String contaCheque;
 }

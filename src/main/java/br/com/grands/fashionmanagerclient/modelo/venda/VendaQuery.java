@@ -1,5 +1,6 @@
 package br.com.grands.fashionmanagerclient.modelo.venda;
 
+import br.com.grands.fashionmanagerclient.modelo.venda.enums.TipoStatus;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
 import org.springframework.format.annotation.DateTimeFormat;

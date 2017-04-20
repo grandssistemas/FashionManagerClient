@@ -1,4 +1,4 @@
-package br.com.grands.fashionmanagerclient.modelo.venda;
+package br.com.grands.fashionmanagerclient.modelo.venda.enums;
 
 /**
  * Created by rafael on 10/03/17.
