@@ -16,4 +16,7 @@ public class Departamento {
     public String nome;
     @ApiModelProperty(value = "Categoria que este departamento possui", position = 3, required = true)
     public List<Categoria> categoria;
+    @ApiModelProperty(value = "Lista dos Ids das caracteristicas do departamento. " +
+            "As caracteristicas devem ser cadastradas anteriormente", position = 4, required = true)
+    public List<Long> caracteristicas;
 }

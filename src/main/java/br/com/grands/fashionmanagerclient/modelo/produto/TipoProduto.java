@@ -1,8 +1,11 @@
 package br.com.grands.fashionmanagerclient.modelo.produto;
 
 
+import br.com.grands.fashionmanagerclient.modelo.caracteristica.CaracteristicaAssociativa;
 import br.com.grands.fashionmanagerclient.modelo.produto.enums.TipoEtiqueta;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.List;
 
 /**
  * Created by gelatti on 17/10/16.
@@ -19,4 +22,6 @@ public class TipoProduto {
             "Esse campo se o produto será de balança ou não. O valor padrão desse campo é UNIDADE",
             position = 4)
     public TipoEtiqueta tipoEtiqueta = TipoEtiqueta.UNIDADE;
+    @ApiModelProperty(value = "Lista de características do tipo de produto.", position = 5)
+    public List<CaracteristicaAssociativa> caracteristicas;
 }
