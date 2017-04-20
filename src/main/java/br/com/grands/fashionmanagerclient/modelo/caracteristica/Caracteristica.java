@@ -20,4 +20,16 @@ public class Caracteristica {
     public List<String> valores;
     @ApiModelProperty(hidden = true)
     public OrigemCaracteristica origem = OrigemCaracteristica.PRODUTO;
+
+    public Caracteristica(){
+
+    }
+
+    public Caracteristica(Long id, String nome, TipoCaracteristica tipo, List<String> valores, OrigemCaracteristica origem) {
+        this.id = id;
+        this.nome = nome;
+        this.tipo = tipo;
+        this.valores = valores;
+        this.origem = origem;
+    }
 }
