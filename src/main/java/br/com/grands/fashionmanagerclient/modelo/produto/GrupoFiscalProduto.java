@@ -12,4 +12,13 @@ public class GrupoFiscalProduto {
     public Long id;
     @ApiModelProperty(value = "Nome do grupo fiscal de produto", position = 2, required = true)
     public String nome;
+
+    public GrupoFiscalProduto(){
+
+    }
+
+    public GrupoFiscalProduto(Long id, String nome) {
+        this.id = id;
+        this.nome = nome;
+    }
 }

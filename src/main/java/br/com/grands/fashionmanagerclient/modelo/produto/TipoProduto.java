@@ -2,6 +2,7 @@ package br.com.grands.fashionmanagerclient.modelo.produto;
 
 
 import br.com.grands.fashionmanagerclient.modelo.caracteristica.CaracteristicaAssociativa;
+import br.com.grands.fashionmanagerclient.modelo.produto.enums.Especificacao;
 import br.com.grands.fashionmanagerclient.modelo.produto.enums.TipoEtiqueta;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -24,4 +25,8 @@ public class TipoProduto {
     public TipoEtiqueta tipoEtiqueta = TipoEtiqueta.UNIDADE;
     @ApiModelProperty(value = "Lista de características do tipo de produto.", position = 5)
     public List<CaracteristicaAssociativa> caracteristicas;
+
+    @ApiModelProperty(value = "Caso os produtos desse tipo de produto exijam campos adicionais para a emissão de documentos fiscais, " +
+            "este campo conterá qual especificação esses produtos terão.", position = 6)
+    public Especificacao especificacao;
 }
