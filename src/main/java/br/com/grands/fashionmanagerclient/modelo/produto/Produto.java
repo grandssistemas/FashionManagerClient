@@ -41,4 +41,26 @@ public class Produto {
     @ApiModelProperty(value = "Atributo que armazena os códigos de barras do produto. " +
             "Caso não seja informado nenhum, será gerado um código de barras pelo sistema.", position = 22)
     public List<CodigoBarras> codigos;
+
+
+    public Produto(){
+
+    }
+
+    public Produto(Produto produto){
+        this.id = produto.id;
+        this.nome = produto.nome;
+        this.status = produto.status;
+        this.tipoProdutoId = produto.tipoProdutoId;
+        this.estoque = produto.estoque;
+        this.fracionado = produto.fracionado;
+        this.pesoLiquido = produto.pesoLiquido;
+        this.pesoBruto = produto.pesoBruto;
+        this.custo = produto.custo;
+        this.valorVenda = produto.valorVenda;
+        this.sku = produto.sku;
+        this.fiscal = produto.fiscal;
+        this.grade = produto.grade;
+        this.codigos = produto.codigos;
+    }
 }
