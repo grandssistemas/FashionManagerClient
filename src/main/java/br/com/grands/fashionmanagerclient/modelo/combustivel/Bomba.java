@@ -6,7 +6,7 @@ import io.swagger.annotations.ApiModelProperty;
 public class Bomba {
 
     @ApiModelProperty(value = "Id da bomba no software que está realizando a integração", required = true, position = 1)
-    public Long id;
+    public Long idintegracao;
 
     @ApiModelProperty(value = "Nome da bomba de combustivel", required = true, position = 2)
     public String nome;
@@ -18,8 +18,8 @@ public class Bomba {
     public Bomba() {
     }
 
-    public Bomba(Long id, String nome, String numero) {
-        this.id = id;
+    public Bomba(Long idintegracao, String nome, String numero) {
+        this.idintegracao = idintegracao;
         this.nome = nome;
         this.numero = numero;
     }

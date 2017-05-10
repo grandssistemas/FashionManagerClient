@@ -8,7 +8,7 @@ import io.swagger.annotations.ApiModelProperty;
 public class Operacao {
 
     @ApiModelProperty(value = "Id da operação do software que esta usando integração", position = 1)
-    public Long id;
+    public Long idintegracao;
     @ApiModelProperty(value = "Nome da operação", position = 2, required = true)
     public String nome;
 }

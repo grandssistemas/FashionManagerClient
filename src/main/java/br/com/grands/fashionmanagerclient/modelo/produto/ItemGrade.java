@@ -14,16 +14,18 @@ public class ItemGrade {
     @ApiModelProperty(value = "Valor do estoque inicial do produto, caso não for informado, será utilizado o valor do produto pai.", position = 1)
     public BigDecimal estoque;
     @ApiModelProperty(value = "Nome do item de variação. Caso não seja informado, será montado utilizando o nome do produto pai e as variações informadas.", position = 2)
-    public String nome;
+    public String nomevariacao;
     @ApiModelProperty(value = "Valor do pesoLiquido do produto, caso não for informado, será utilizado o valor do produto pai.", position = 3)
-    public BigDecimal pesoLiquido;
+    public BigDecimal pesoliquido;
     @ApiModelProperty(value = "Valor do pesoBruto do produto, caso não for informado, será utilizado o valor do produto pai.", position = 4)
-    public BigDecimal pesoBruto;
+    public BigDecimal pesobruto;
     @ApiModelProperty(value = "Valor do SKU da variação. Esse valor deve ser único por organização. " +
             "Caso não seja informado, será gerado a partir do SKU do produto pai e a variação informada.", position = 5)
     public String sku;
     @ApiModelProperty(value = "Lista de códigos de barras deste produto. Caso não seja informado nenhum, será gerado um código pelo sistema.", position = 6)
-    public List<CodigoBarras> codigos;
+    public List<CodigoBarras> codigosbarras;
+    @ApiModelProperty(value = "Lista com as fotos do item de variação. Caso não seja informado nenhuma, serão utilizadas as fotos do produto.", position = 7)
+    public List<Foto> fotos;
 
 
 }

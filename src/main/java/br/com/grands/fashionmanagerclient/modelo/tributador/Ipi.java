@@ -11,15 +11,15 @@ import java.math.BigDecimal;
 public class Ipi {
 
     @ApiModelProperty(value = "CST que esta relacionado ao grupo de tributação", position = 1, required = true)
-    public String CST;
+    public String cst;
     @ApiModelProperty(value = "Tipo de unidade para o calculo do IPI", position = 2)
-    public CalculationType ipiCalculationType;
+    public CalculationType ipicalculationtype;
     @ApiModelProperty(value = "Nome da formula para o valor do IPI", position = 3)
-    public String vIPI;
+    public String vipi;
     @ApiModelProperty(value = "Nome da formula para o valor da base de calculo do IPI", position = 4)
-    public String vBC;
+    public String vbc;
     @ApiModelProperty(value = "Percentual do IPI", position = 5)
-    public BigDecimal pIPI;
+    public BigDecimal pipi;
     @ApiModelProperty(value = "Mensagem que ira aparecer nas informações adicionais da nota", position = 6)
     public String mensagem;
 }

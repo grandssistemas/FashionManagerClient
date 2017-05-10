@@ -12,7 +12,7 @@ import java.util.List;
 public class Tributador {
 
     @ApiModelProperty(value = "Id da tributação do software que esta usando integração", position = 1)
-    public Long id;
+    public Long idintegracao;
     @ApiModelProperty(value = "Lista de operações que estão ligadas a tributação", position = 2, required = true)
     public List<Operacao> operacao;
     @ApiModelProperty(value = "Lista de siglas de estados de origem para tributação", position = 3, required = true)
@@ -20,9 +20,9 @@ public class Tributador {
     @ApiModelProperty(value = "Lista de siglas de estados de destino para tributação", position = 4, required = true)
     public List<String> destino;
     @ApiModelProperty(value = "Lista de grupos fiscais de pessoa para tributação", position = 5, required = true)
-    public List<GrupoFiscalPessoa> grupoFiscalPessoa;
+    public List<GrupoFiscalPessoa> grupofiscalpessoa;
     @ApiModelProperty(value = "Lista de grupos fiscais de produto para tributação", position = 6, required = true)
-    public List<GrupoFiscalProduto> grupoFiscalProduto;
+    public List<GrupoFiscalProduto> grupofiscalproduto;
     @ApiModelProperty(value = "Grupo de tributação de ICMS para a tributação", position = 7)
     public Icms icms;
     @ApiModelProperty(value = "Grupo de tributação de PIS para a tributação", position = 8)

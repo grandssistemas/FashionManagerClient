@@ -11,23 +11,23 @@ import java.math.BigDecimal;
 public class Pis {
 
     @ApiModelProperty(value = "CST que esta relacionado ao grupo de tributação", position = 1, required = true)
-    public String CST;
+    public String cst;
     @ApiModelProperty(value = "Nome da formula para o valor da base de calculo do PIS", position = 2)
-    public String vBC;
+    public String vbc;
     @ApiModelProperty(value = "Nome da formula para o valor do PIS", position = 3)
-    public String vPIS;
+    public String vpis;
     @ApiModelProperty(value = "Percentual do PIS", position = 4)
-    public BigDecimal pPIS;
+    public BigDecimal ppis;
     @ApiModelProperty(value = "Nome da formula para o valor da base de calculo do PIS ST", position = 5)
-    public String vBCST;
+    public String vbcst;
     @ApiModelProperty(value = "Nome da formula para o valor do PIS ST", position = 6)
-    public String vPISST;
+    public String vpisst;
     @ApiModelProperty(value = "Percentual do PIS ST", position = 7)
-    public BigDecimal pPISST;
+    public BigDecimal ppisst;
     @ApiModelProperty(value = "Tipo de unidade para o calculo do PIS", position = 8)
-    public CalculationType calculationType;
+    public CalculationType calculationtype;
     @ApiModelProperty(value = "Tipo de unidade para o calculo do PIS ST", position = 9)
-    public CalculationType calculationTypeST;
+    public CalculationType calculationtypest;
     @ApiModelProperty(value = "Mensagem que ira aparecer nas informações adicionais da nota", position = 10)
     public String mensagem;
 }

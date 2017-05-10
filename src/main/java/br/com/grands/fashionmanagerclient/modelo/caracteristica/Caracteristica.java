@@ -10,7 +10,7 @@ import java.util.List;
 public class Caracteristica {
 
     @ApiModelProperty(value = "Id da caracteristica do software que esta usando a integração", position = 1, required = true)
-    public Long id;
+    public Long idintegracao;
     @ApiModelProperty(value = "Nome da caracteristica", position = 2, required = true)
     public String nome;
     @ApiModelProperty(value = "Tipo da caracteristica", position = 3,required = true)
@@ -25,8 +25,8 @@ public class Caracteristica {
 
     }
 
-    public Caracteristica(Long id, String nome, TipoCaracteristica tipo, List<String> valores, OrigemCaracteristica origem) {
-        this.id = id;
+    public Caracteristica(Long idintegracao, String nome, TipoCaracteristica tipo, List<String> valores, OrigemCaracteristica origem) {
+        this.idintegracao = idintegracao;
         this.nome = nome;
         this.tipo = tipo;
         this.valores = valores;
