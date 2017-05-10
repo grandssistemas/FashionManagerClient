@@ -7,8 +7,7 @@ import java.util.List;
 public class Tanque {
 
     @ApiModelProperty(value = "Id do tanque no software que está realizando a integração", required = true, position = 1)
-    public Long id;
-
+    public Long idintegracao;
     @ApiModelProperty(value = "Nome do tanque", required = true, position = 2)
     public String nome;
     @ApiModelProperty(value = "Número do tanque. Este número deve ser único por organização", required = true, position = 3)
@@ -23,8 +22,8 @@ public class Tanque {
     public Tanque() {
     }
 
-    public Tanque(Long id, String nome, String numero, List<Long> combustiveis) {
-        this.id = id;
+    public Tanque(Long idintegracao, String nome, String numero, List<Long> combustiveis) {
+        this.idintegracao = idintegracao;
         this.nome = nome;
         this.numero = numero;
         this.combustiveis = combustiveis;

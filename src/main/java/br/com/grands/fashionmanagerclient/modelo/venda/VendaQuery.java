@@ -17,39 +17,39 @@ public class VendaQuery {
     @DateTimeFormat(pattern = "dd/MM/yyyy")
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     @ApiModelProperty(value = "Data de inicio do periodo.", position = 1)
-    private Date inicioPeriodo;
+    private Date inicioperiodo;
     @DateTimeFormat(pattern = "dd/MM/yyyy")
     @JsonFormat(pattern = "dd/MM/yyyy")
     @ApiModelProperty(value = "Data de fim do periodo.", position = 1)
-    private Date fimPeriodo;
+    private Date fimperiodo;
     @ApiModelProperty(value = "Indica o status da venda que será retornado (SALVA|FINALIZADA|CANCELADA).", position = 1)
     private List<TipoStatus> status;
     @ApiModelProperty(value = "Indica se quer vendas com ou sem emissão fiscal, caso passe nulo.", position = 1)
-    private Boolean comEmissao;
+    private Boolean comemissao;
 
 
     public Date getInicioPeriodo() {
-        return inicioPeriodo;
+        return inicioperiodo;
     }
 
-    public void setInicioPeriodo(Date inicioPeriodo) {
-        this.inicioPeriodo = inicioPeriodo;
+    public void setInicioPeriodo(Date inicioperiodo) {
+        this.inicioperiodo = inicioperiodo;
     }
 
     public Date getFimPeriodo() {
-        return fimPeriodo;
+        return fimperiodo;
     }
 
-    public void setFimPeriodo(Date fimPeriodo) {
-        this.fimPeriodo = fimPeriodo;
-        if (this.fimPeriodo != null) {
+    public void setFimPeriodo(Date fimperiodo) {
+        this.fimperiodo = fimperiodo;
+        if (this.fimperiodo != null) {
             Calendar calendar = Calendar.getInstance();
-            calendar.setTime(fimPeriodo);
+            calendar.setTime(fimperiodo);
             int year = calendar.get(Calendar.YEAR);
             int month = calendar.get(Calendar.MONTH);
             int day = calendar.get(Calendar.DAY_OF_MONTH);
             calendar.set(year, month, day, 23, 59, 59);
-            this.fimPeriodo = calendar.getTime();
+            this.fimperiodo = calendar.getTime();
         }
     }
 
@@ -62,10 +62,10 @@ public class VendaQuery {
     }
 
     public Boolean getComEmissao() {
-        return comEmissao;
+        return comemissao;
     }
 
-    public void setComEmissao(Boolean comEmissao) {
-        this.comEmissao = comEmissao;
+    public void setComEmissao(Boolean comemissao) {
+        this.comemissao = comemissao;
     }
 }

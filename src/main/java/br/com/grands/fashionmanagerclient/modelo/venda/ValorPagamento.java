@@ -13,22 +13,22 @@ import java.util.Date;
 public class ValorPagamento {
 
     @ApiModelProperty(value = "Forma de pagamento (SEFAZ).", position = 1)
-    public String tPag;
+    public String tpag;
     @ApiModelProperty(value = "Numero do cheque.", position = 2)
-    public String numCheque;
+    public String numcheque;
     @ApiModelProperty(value = "Valor do pagamento.", position = 3)
-    public BigDecimal valorPagamento;
+    public BigDecimal valorpagamento;
     @DateTimeFormat(pattern = "dd/MM/yyyy")
     @JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "dd/MM/yyyy")
     @ApiModelProperty(value = "Data de vencimento.", position = 4)
-    public Date dataVencimento;
+    public Date datavencimento;
 
     @ApiModelProperty(value = "Numero do banco.", position = 5)
-    public String numBanco;
+    public String numbanco;
     @ApiModelProperty(value = "Documento do cliente, CPF para pessoa fisica e CNPJ para pessoa juridica.", position = 6)
-    public String docCliente;
+    public String doccliente;
     @ApiModelProperty(value = "Agência do cheque.", position = 7)
-    public String agenciaCheque;
+    public String agenciacheque;
     @ApiModelProperty(value = "Conta do cheque.", position = 8)
-    public String contaCheque;
+    public String contacheque;
 }

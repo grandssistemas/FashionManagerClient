@@ -5,15 +5,12 @@ import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
 import java.util.List;
 
-/**
- * Created by luizaugusto on 18/04/17.
- */
 public class Combustivel extends Produto {
 
     @ApiModelProperty(value = "Código da agencia nacional do petroleo", position = 14)
-    public String codigoANP;
+    public String codigoanp;
     @ApiModelProperty(value = "Percentual de gás natural", position = 15)
-    public BigDecimal percentualGasNatural;
+    public BigDecimal percentualgasnatural;
     @ApiModelProperty(value = "Código do CODIF", position = 16)
     public String codif;
 
@@ -27,8 +24,8 @@ public class Combustivel extends Produto {
 
     public Combustivel(Combustivel combustivel){
         this((Produto) combustivel);
-        this.codigoANP = combustivel.codigoANP;
-        this.percentualGasNatural = combustivel.percentualGasNatural;
+        this.codigoanp = combustivel.codigoanp;
+        this.percentualgasnatural = combustivel.percentualgasnatural;
         this.codif = combustivel.codif;
     }
 

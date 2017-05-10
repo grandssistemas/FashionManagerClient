@@ -1,8 +1,5 @@
 package br.com.grands.fashionmanagerclient.modelo.produto.enums;
 
-/**
- * Created by luizaugusto on 25/04/17.
- */
 public enum Especificacao {
     COMBUSTIVEL("GAS")
 //    ,ARMAMENTO("WEAPON")

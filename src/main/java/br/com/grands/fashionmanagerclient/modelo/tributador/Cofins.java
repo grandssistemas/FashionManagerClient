@@ -11,25 +11,25 @@ import java.math.BigDecimal;
 public class Cofins {
 
     @ApiModelProperty(value = "Nome da formula para o valor da base de calculo do COFINS", position = 1)
-    public String vBC;
+    public String vbc;
     @ApiModelProperty(value = "Nome da formula para o valor do COFINS", position = 2)
-    public String vCOFINS;
+    public String vcofins;
     @ApiModelProperty(value = "Nome da formula para o valor por unidade tributável", position = 3)
-    public String vUnid;
+    public String vunid;
     @ApiModelProperty(value = "Percentual do COFINS", position = 4)
-    public BigDecimal pCOFINS;
+    public BigDecimal pcofins;
     @ApiModelProperty(value = "Tipo de unidade para o calculo do COFINS", position = 5)
-    public CalculationType calculationType;
+    public CalculationType calculationtype;
     @ApiModelProperty(value = "Tipo de unidade para o calculo do COFINS ST", position = 6)
-    public CalculationType calculationTypeST;
+    public CalculationType calculationtypest;
     @ApiModelProperty(value = "Nome da formula para o valor da base de calculo do COFINS ST", position = 7)
-    public String vBCST;
+    public String vbcst;
     @ApiModelProperty(value = "Nome da formula para o valor do COFINS ST", position = 8)
-    public String vCOFINSST;
+    public String vcofinsst;
     @ApiModelProperty(value = "Percentual do COFINS ST", position = 9)
-    public BigDecimal pCOFINSST;
+    public BigDecimal pcofinsst;
     @ApiModelProperty(value = "Mensagem que ira aparecer nas informações adicionais da nota", position = 10)
     public String mensagem;
     @ApiModelProperty(value = "CST que esta relacionado ao grupo de tributação", position = 11, required = true)
-    public String CST;
+    public String cst;
 }

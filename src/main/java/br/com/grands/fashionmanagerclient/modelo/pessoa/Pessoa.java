@@ -9,7 +9,7 @@ import java.util.List;
 public class Pessoa {
 
     @ApiModelProperty(value = "Id da pessoa do software que esta usando a integração", position = 1, required = true)
-    public Long id;
+    public Long idintegracao;
     @ApiModelProperty(value = "Tipo de pessoa. Valores válidos: ['FISICA','JURIDICA']", position = 2, required = true)
     public TipoPessoa tipo;
     @ApiModelProperty(value = "CPF da pessoa, caso ela seja pessoa física", position = 3)
@@ -21,11 +21,11 @@ public class Pessoa {
     @ApiModelProperty(value = "Inscrição estadual da pessoa, caso ela seja pessoa jurídica", position = 6)
     public String ie;
     @ApiModelProperty(value = "Indicador da Inscrição Estadual da pessoa, caso ela seja pessoa jurídica. Valores Válidos: [1, 2, 9]", position = 7)
-    public Integer indicadorIE;
+    public Integer indicadorie;
     @ApiModelProperty(value = "Data do cadastro da pessoa", position = 8, required = true)
-    public Date dataCadastro;
+    public Date datacadastro;
     @ApiModelProperty(value = "Grupo fiscal que a pessoa pertence", position = 9, required = true)
-    public GrupoFiscalPessoa grupoFiscalPessoa;
+    public GrupoFiscalPessoa grupofiscalpessoa;
     @ApiModelProperty(value = "Status do cadastro da pessoa. True representa ativo e False inativo. O valor padao desse campo é TRUE", position = 10, required = true)
     public Boolean status = Boolean.TRUE;
     @ApiModelProperty(value = "Nome da pessoa, caso ela seja pessoa física", position = 11)
@@ -45,5 +45,5 @@ public class Pessoa {
     @ApiModelProperty(value = "Lista de telefones da pessoa, deve conter pelo menos 1 telefone. O primeiro telefone será considerado o telefone principal", position = 18)
     public List<String> telefone;
     @ApiModelProperty(value = "Lista de locais de faturamento. O primeiro local será considerado o principal", position = 18)
-    public List<LocalFaturamento> localFaturamento;
+    public List<LocalFaturamento> localfaturamento;
 }

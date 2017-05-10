@@ -5,7 +5,7 @@ import io.swagger.annotations.ApiModelProperty;
 public class TipoPagamento {
 
     @ApiModelProperty(value = "Id do tipo de pagamento do software que esta usando a integração", position = 1, required = true)
-    public Long id;
+    public Long idintegracao;
     @ApiModelProperty(value="Nome do tipo de pagamento", position = 2, required = true)
     public String nome;
     @ApiModelProperty("Código do tipo de pagamento segundo a Sefaz. Valores válidos:<br/> " +
@@ -19,15 +19,15 @@ public class TipoPagamento {
             "12 - Vale Presente; <br/>" +
             "13 - Vale Combustível; <br/>" +
             "99 - Outros")
-    public Integer codigoSefaz;
+    public Integer codigosefaz;
 
     public TipoPagamento(){
 
     }
 
-    public TipoPagamento(Long id, String nome, Integer codigoSefaz) {
-        this.id = id;
+    public TipoPagamento(Long idintegracao, String nome, Integer codigosefaz) {
+        this.idintegracao = idintegracao;
         this.nome = nome;
-        this.codigoSefaz = codigoSefaz;
+        this.codigosefaz = codigosefaz;
     }
 }

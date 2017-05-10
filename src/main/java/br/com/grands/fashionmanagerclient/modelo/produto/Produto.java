@@ -12,35 +12,50 @@ import java.util.List;
 
 public class Produto {
     @ApiModelProperty(value = "Id do produto do software que esta usando integração", position = 1)
-    public Long id;
+    public Long idintegracao;
     @ApiModelProperty(value = "Nome do produto", position = 2, required = true)
     public String nome;
-    @ApiModelProperty(value = "Atributo que indica se o produto está ativo ou não. O valor padrão do campo é TRUE", position = 11)
+    @ApiModelProperty(value = "Nome abreviado do produto, para ser usado em etiquetas", position = 3)
+    public String nomeabreviado;
+    @ApiModelProperty(value = "Atributo que indica se o produto está ativo ou não. O valor padrão do campo é TRUE", position = 4)
     public Boolean status = Boolean.TRUE;
-    @ApiModelProperty(value = "Id do tipo de produto. O tipo de produto deve estar cadastrado no momento do cadastro de produto.", position = 12, required = true)
-    public Long tipoProdutoId;
-    @ApiModelProperty(value = "Quantidade em estoque do produto. O valor padrão do campo é 0", position = 13)
+    @ApiModelProperty(value = "Id do tipo de produto. O tipo de produto deve estar cadastrado no momento do cadastro de produto.", position = 5, required = true)
+    public Long idtipoproduto;
+    @ApiModelProperty(value = "Quantidade em estoque do produto. O valor padrão do campo é 0", position = 6)
     public BigDecimal estoque = BigDecimal.ZERO;
-    @ApiModelProperty(value = "Atributo que indica se o produto pode ser movimentado fracionado. O valor padrão do campo é FALSE", position = 14)
+    @ApiModelProperty(value = "Atributo que indica se o produto pode ser movimentado fracionado. O valor padrão do campo é FALSE", position = 7)
     public Boolean fracionado = Boolean.FALSE;
-    @ApiModelProperty(value = "Atributo que armazena o peso líquido do produto.", position = 15, required = true)
-    public BigDecimal pesoLiquido;
-    @ApiModelProperty(value = "Atributo que armazena o peso bruto do produto.", position = 16, required = true)
-    public BigDecimal pesoBruto;
-    @ApiModelProperty(value = "Atributo que armazena o custo do produto.", position = 17, required = true)
+    @ApiModelProperty(value = "Atributo que armazena o peso líquido do produto.", position = 8, required = true)
+    public BigDecimal pesoliquido;
+    @ApiModelProperty(value = "Atributo que armazena o peso bruto do produto.", position = 9, required = true)
+    public BigDecimal pesobruto;
+    @ApiModelProperty(value = "Atributo que armazena o custo do produto.", position = 10, required = true)
     public BigDecimal custo;
-    @ApiModelProperty(value = "Atributo que armazena o valor de venda do produto.", position = 18, required = true)
-    public BigDecimal valorVenda;
+    @ApiModelProperty(value = "Atributo que armazena o valor de venda do produto.", position = 11, required = true)
+    public BigDecimal valorvenda;
     @ApiModelProperty(value = "Atributo que armazena o SKU do produto. Esse atributo deve ser único por organização. " +
-            "Caso não for informado, será gerada uma string aletória de 8 digitos.", position = 19)
-    public String sku;
-    @ApiModelProperty(value = "Atributo que armazena os dados fiscais do produto.", position = 20)
+            "Caso não for informado, será gerada uma string aletória de 8 digitos.", position = 12)
+    public String skubase;
+    @ApiModelProperty(value = "String representando a data de cadastro do produto, no formato 'YYYY-MM-DD'", position = 13)
+    public String datacadastro;
+    @ApiModelProperty(value="Observações sobre o produto. Esse campo pode conter no máximo 5000 caracteres.", position = 14)
+    public String observacoes;
+    @ApiModelProperty(value="Id da marca.A marca deve estar cadastrada no momento do cadastro de produto.", position = 15)
+    public Long idmarca;
+    @ApiModelProperty(value = "Atributo que armazena os dados fiscais do produto.", position = 16)
     public Fiscal fiscal;
-    @ApiModelProperty(value = "Atributo que informa as variações de grade do produto.", position = 21)
-    public List<ItemGrade> grade;
+
+    public List<String> classificacao;
+    @ApiModelProperty(value = "Atributo que informa as variações do produto.", position = 17)
+    public List<ItemGrade> variacoes;
     @ApiModelProperty(value = "Atributo que armazena os códigos de barras do produto. " +
-            "Caso não seja informado nenhum, será gerado um código de barras pelo sistema.", position = 22)
+            "Esse atributo é utilizado para cadastrar os códigos de barras quando o produto não possui variações. " +
+            "Caso não seja informado nenhum, será gerado um código de barras pelo sistema.", position = 18)
     public List<CodigoBarras> codigos;
+
+    @ApiModelProperty(value = "Conjunto de fotos do produto.", position = 19)
+    public List<Foto> fotos;
+
 
 
     public Produto(){
@@ -48,19 +63,24 @@ public class Produto {
     }
 
     public Produto(Produto produto){
-        this.id = produto.id;
+        this.idintegracao = produto.idintegracao;
         this.nome = produto.nome;
+        this.nomeabreviado = produto.nomeabreviado;
         this.status = produto.status;
-        this.tipoProdutoId = produto.tipoProdutoId;
+        this.idtipoproduto = produto.idtipoproduto;
         this.estoque = produto.estoque;
         this.fracionado = produto.fracionado;
-        this.pesoLiquido = produto.pesoLiquido;
-        this.pesoBruto = produto.pesoBruto;
+        this.pesoliquido = produto.pesoliquido;
+        this.pesobruto = produto.pesobruto;
         this.custo = produto.custo;
-        this.valorVenda = produto.valorVenda;
-        this.sku = produto.sku;
+        this.valorvenda = produto.valorvenda;
+        this.skubase = produto.skubase;
+        this.datacadastro = produto.datacadastro;
+        this.observacoes = produto.observacoes;
+        this.idmarca = produto.idmarca;
         this.fiscal = produto.fiscal;
-        this.grade = produto.grade;
+        this.variacoes = produto.variacoes;
         this.codigos = produto.codigos;
+        this.classificacao = produto.classificacao;
     }
 }
