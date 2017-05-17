@@ -1,6 +1,7 @@
 package br.com.grands.fashionmanagerclient.modelo.produto;
 
 
+import br.com.grands.fashionmanagerclient.modelo.foto.Foto;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.math.BigDecimal;
@@ -52,7 +53,6 @@ public class Produto {
             "Esse atributo é utilizado para cadastrar os códigos de barras quando o produto não possui variações. " +
             "Caso não seja informado nenhum, será gerado um código de barras pelo sistema.", position = 18)
     public List<CodigoBarras> codigos;
-
     @ApiModelProperty(value = "Conjunto de fotos do produto.", position = 19)
     public List<Foto> fotos;
 
@@ -82,5 +82,6 @@ public class Produto {
         this.variacoes = produto.variacoes;
         this.codigos = produto.codigos;
         this.classificacao = produto.classificacao;
+        this.fotos = produto.fotos;
     }
 }

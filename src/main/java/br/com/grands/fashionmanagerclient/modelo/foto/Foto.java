@@ -1,4 +1,4 @@
-package br.com.grands.fashionmanagerclient.modelo.produto;
+package br.com.grands.fashionmanagerclient.modelo.foto;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -13,9 +13,8 @@ public class Foto {
 
     @ApiModelProperty(value = "Id da foto no software que está realizando a integração", position = 1, required = true)
     public Long idintegracao;
-
-    @ApiModelProperty(value = "Caso seja fornecida uma URL ")
+    @ApiModelProperty(value = "Caso seja fornecida uma URL")
     public String imagemurl;
-
+    @ApiModelProperty(value = "Caso seja fornecida um arquivo")
     public File imagemarquivo;
 }
