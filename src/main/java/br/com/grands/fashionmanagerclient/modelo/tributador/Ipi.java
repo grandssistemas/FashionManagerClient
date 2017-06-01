@@ -1,5 +1,6 @@
 package br.com.grands.fashionmanagerclient.modelo.tributador;
 
+import br.com.grands.fashionmanagerclient.modelo.tributador.enums.CalculationType;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.math.BigDecimal;
@@ -10,73 +11,17 @@ import java.math.BigDecimal;
 public class Ipi {
 
     @ApiModelProperty(value = "CST que esta relacionado ao grupo de tributação", position = 1, required = true)
-    private String CST;
+    public String cst;
     @ApiModelProperty(value = "Tipo de unidade para o calculo do IPI", position = 2)
-    private String ipiCalculationType;
+    public CalculationType ipicalculationtype;
     @ApiModelProperty(value = "Nome da formula para o valor do IPI", position = 3)
-    private String vIPI;
+    public String vipi;
     @ApiModelProperty(value = "Nome da formula para o valor da base de calculo do IPI", position = 4)
-    private String vBC;
+    public String vbc;
     @ApiModelProperty(value = "Percentual do IPI", position = 5)
-    private BigDecimal pIPI;
+    public BigDecimal pipi;
     @ApiModelProperty(value = "Mensagem que ira aparecer nas informações adicionais da nota", position = 6)
-    private String mensagem;
-
-    public String getCST() {
-        return CST;
-    }
-
-    public void setCST(String CST) {
-        this.CST = CST;
-    }
-
-    public String getIpiCalculationType() {
-        return ipiCalculationType;
-    }
-
-    public void setIpiCalculationType(String ipiCalculationType) {
-        this.ipiCalculationType = ipiCalculationType;
-    }
-
-    public String getvIPI() {
-        return vIPI;
-    }
-
-    public void setvIPI(String vIPI) {
-        this.vIPI = vIPI;
-    }
-
-    public String getvBC() {
-        return vBC;
-    }
-
-    public void setvBC(String vBC) {
-        this.vBC = vBC;
-    }
-
-    public BigDecimal getpIPI() {
-        return pIPI;
-    }
-
-    public void setpIPI(BigDecimal pIPI) {
-        this.pIPI = pIPI;
-    }
-
-    public String getMensagem() {
-        return mensagem;
-    }
-
-    public void setMensagem(String mensagem) {
-        this.mensagem = mensagem;
-    }
-
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
+    public String mensagem;
+    @ApiModelProperty(value = "Código de enquadramento de IPI da tributação", position = 7)
+    public String codigoenquadramentoipi;
 }

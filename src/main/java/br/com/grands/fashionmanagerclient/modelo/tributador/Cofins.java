@@ -1,5 +1,6 @@
 package br.com.grands.fashionmanagerclient.modelo.tributador;
 
+import br.com.grands.fashionmanagerclient.modelo.tributador.enums.CalculationType;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.math.BigDecimal;
@@ -10,123 +11,25 @@ import java.math.BigDecimal;
 public class Cofins {
 
     @ApiModelProperty(value = "Nome da formula para o valor da base de calculo do COFINS", position = 1)
-    private String vBC;
+    public String vbc;
     @ApiModelProperty(value = "Nome da formula para o valor do COFINS", position = 2)
-    private String vCOFINS;
+    public String vcofins;
     @ApiModelProperty(value = "Nome da formula para o valor por unidade tributável", position = 3)
-    private String vUnid;
+    public String vunid;
     @ApiModelProperty(value = "Percentual do COFINS", position = 4)
-    private BigDecimal pCOFINS;
+    public BigDecimal pcofins;
     @ApiModelProperty(value = "Tipo de unidade para o calculo do COFINS", position = 5)
-    private String calculationType;
+    public CalculationType calculationtype;
     @ApiModelProperty(value = "Tipo de unidade para o calculo do COFINS ST", position = 6)
-    private String calculationTypeST;
+    public CalculationType calculationtypest;
     @ApiModelProperty(value = "Nome da formula para o valor da base de calculo do COFINS ST", position = 7)
-    private String vBCST;
+    public String vbcst;
     @ApiModelProperty(value = "Nome da formula para o valor do COFINS ST", position = 8)
-    private String vCOFINSST;
+    public String vcofinsst;
     @ApiModelProperty(value = "Percentual do COFINS ST", position = 9)
-    private BigDecimal pCOFINSST;
+    public BigDecimal pcofinsst;
     @ApiModelProperty(value = "Mensagem que ira aparecer nas informações adicionais da nota", position = 10)
-    private String mensagem;
+    public String mensagem;
     @ApiModelProperty(value = "CST que esta relacionado ao grupo de tributação", position = 11, required = true)
-    private String CST;
-
-    public String getvBC() {
-        return vBC;
-    }
-
-    public void setvBC(String vBC) {
-        this.vBC = vBC;
-    }
-
-    public String getvCOFINS() {
-        return vCOFINS;
-    }
-
-    public void setvCOFINS(String vCOFINS) {
-        this.vCOFINS = vCOFINS;
-    }
-
-    public String getvUnid() {
-        return vUnid;
-    }
-
-    public void setvUnid(String vUnid) {
-        this.vUnid = vUnid;
-    }
-
-    public BigDecimal getpCOFINS() {
-        return pCOFINS;
-    }
-
-    public void setpCOFINS(BigDecimal pCOFINS) {
-        this.pCOFINS = pCOFINS;
-    }
-
-    public String getCalculationType() {
-        return calculationType;
-    }
-
-    public void setCalculationType(String calculationType) {
-        this.calculationType = calculationType;
-    }
-
-    public String getCalculationTypeST() {
-        return calculationTypeST;
-    }
-
-    public void setCalculationTypeST(String calculationTypeST) {
-        this.calculationTypeST = calculationTypeST;
-    }
-
-    public String getvBCST() {
-        return vBCST;
-    }
-
-    public void setvBCST(String vBCST) {
-        this.vBCST = vBCST;
-    }
-
-    public String getvCOFINSST() {
-        return vCOFINSST;
-    }
-
-    public void setvCOFINSST(String vCOFINSST) {
-        this.vCOFINSST = vCOFINSST;
-    }
-
-    public BigDecimal getpCOFINSST() {
-        return pCOFINSST;
-    }
-
-    public void setpCOFINSST(BigDecimal pCOFINSST) {
-        this.pCOFINSST = pCOFINSST;
-    }
-
-    public String getMensagem() {
-        return mensagem;
-    }
-
-    public void setMensagem(String mensagem) {
-        this.mensagem = mensagem;
-    }
-
-    public String getCST() {
-        return CST;
-    }
-
-    public void setCST(String CST) {
-        this.CST = CST;
-    }
-
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
+    public String cst;
 }

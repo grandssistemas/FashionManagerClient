@@ -9,33 +9,16 @@ import io.swagger.annotations.ApiModelProperty;
 public class GrupoFiscalProduto {
 
     @ApiModelProperty(value = "Id do grupo fiscal do produto do software que esta usando integração", position = 1)
-    private Long id;
+    public Long idintegracao;
     @ApiModelProperty(value = "Nome do grupo fiscal de produto", position = 2, required = true)
-    private String nome;
+    public String nome;
 
-    public Long getId() {
-        return id;
+    public GrupoFiscalProduto(){
+
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
+    public GrupoFiscalProduto(Long idintegracao, String nome) {
+        this.idintegracao = idintegracao;
         this.nome = nome;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
-
-    @Override
-    public int hashCode() {
-        return super.hashCode();
     }
 }

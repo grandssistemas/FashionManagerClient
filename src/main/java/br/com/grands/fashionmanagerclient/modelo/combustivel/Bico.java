@@ -5,69 +5,29 @@ import io.swagger.annotations.ApiModelProperty;
 public class Bico {
 
     @ApiModelProperty(value = "Id do bico no software que está realizando a integração", required = true, position = 1)
-    private Long id;
+    public Long idintegracao;
 
     @ApiModelProperty(value = "Id da bomba que o bico está relacionado no software que está realizando a integração", required = true, position = 2)
-    private Long idBomba;
+    public Long idbomba;
 
     @ApiModelProperty(value = "Id do tanque que o bico está relacionado no software que está realizando a integração", required = true, position = 3)
-    private Long idTanque;
+    public Long idtanque;
 
     @ApiModelProperty(value = "Id do produto que o bico está relacionado no software que está realizando a integração. " +
             "São aceito somente produtos que estejam relacionados ao tanque informado.", required = true, position = 4)
-    private Long idProduto;
+    public Long idproduto;
 
     @ApiModelProperty(value = "Número do bico. Este número deve ser único por organização", required = true, position = 5)
-    private Long numero;
+    public Long numero;
 
     public Bico() {
     }
 
-    public Bico(Long id, Long idBomba, Long idTanque, Long idProduto, Long numero) {
-        this.id = id;
-        this.idBomba = idBomba;
-        this.idTanque = idTanque;
-        this.idProduto = idProduto;
-        this.numero = numero;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getIdBomba() {
-        return idBomba;
-    }
-
-    public void setIdBomba(Long idBomba) {
-        this.idBomba = idBomba;
-    }
-
-    public Long getIdTanque() {
-        return idTanque;
-    }
-
-    public void setIdTanque(Long idTanque) {
-        this.idTanque = idTanque;
-    }
-
-    public Long getIdProduto() {
-        return idProduto;
-    }
-
-    public void setIdProduto(Long idProduto) {
-        this.idProduto = idProduto;
-    }
-
-    public Long getNumero() {
-        return numero;
-    }
-
-    public void setNumero(Long numero) {
+    public Bico(Long idintegracao, long idbomba, Long idtanque, Long idproduto, Long numero) {
+        this.idintegracao = idintegracao;
+        this.idbomba = idbomba;
+        this.idtanque = idtanque;
+        this.idproduto = idproduto;
         this.numero = numero;
     }
 }
