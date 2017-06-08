@@ -10,4 +10,13 @@ public class CaracteristicaAssociativa {
     public Long idcaracteristica;
     @ApiModelProperty(value = "Atributo que indica se nesta associação, a caracteristica é obrigatória ou não. O valor padrão é FALSE", position = 1)
     public Boolean obrigatoria = Boolean.FALSE;
+
+    public CaracteristicaAssociativa() {
+
+    }
+
+    public CaracteristicaAssociativa(Long idcaracteristica, Boolean obrigatoria) {
+        this.idcaracteristica = idcaracteristica;
+        this.obrigatoria = obrigatoria;
+    }
 }

@@ -5,6 +5,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 public class Pessoa {
 
@@ -36,8 +37,8 @@ public class Pessoa {
     public String razao;
     @ApiModelProperty(value = "Nome fantasia da pessoa, caso ela seja pessoa jurídica", position = 14)
     public String fantasia;
-    @ApiModelProperty(value = "Lista de papéis da pessoa. Valores válidos: ['CLIENTE','FORNECEDOR','FUNCIONARIO']",position = 15, required = true)
-    public List<String> papel;
+    @ApiModelProperty(value = "Lista de papéis da pessoa. Informe os id's dos papéis já cadastrado.", position = 15, required = true)
+    public List<Long> papeis;
     @ApiModelProperty(value = "Lista de endereços da pessoa, deve conter pelo menos 1 endereço. O primeiro endereço será considerado o endereço principal", position = 16)
     public List<Endereco> endereco;
     @ApiModelProperty(value = "Lista de emails da pessoa, deve conter pelo menos 1 email. O primeiro email será considerado o email principal", position = 17)
@@ -46,4 +47,6 @@ public class Pessoa {
     public List<String> telefone;
     @ApiModelProperty(value = "Lista de locais de faturamento. O primeiro local será considerado o principal", position = 18)
     public List<LocalFaturamento> localfaturamento;
+    @ApiModelProperty(value = "Lista de marcadores.", position = 19)
+    public List<Marcador> marcadores;
 }
