@@ -15,6 +15,6 @@ public class Foto {
     public Long idintegracao;
     @ApiModelProperty(value = "Caso seja fornecida uma URL")
     public String imagemurl;
-    @ApiModelProperty(value = "Caso seja fornecida um arquivo")
-    public File imagemarquivo;
+    @ApiModelProperty(value = "Id do arquivo no storage")
+    public Long idstorage;
 }
