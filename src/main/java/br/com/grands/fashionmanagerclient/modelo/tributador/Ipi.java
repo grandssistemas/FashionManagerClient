@@ -22,4 +22,6 @@ public class Ipi {
     public BigDecimal pipi;
     @ApiModelProperty(value = "Mensagem que ira aparecer nas informações adicionais da nota", position = 6)
     public String mensagem;
+    @ApiModelProperty(value = "Código de enquadramento de IPI da tributação", position = 7)
+    public String codigoenquadramentoipi;
 }

@@ -10,8 +10,6 @@ public class Fiscal {
     public String ncm;
     @ApiModelProperty(value = "Código CEST do produto", position = 1)
     public String cest;
-    @ApiModelProperty(value = "Código de enquadramento de IPI do produto", position = 2)
-    public String codigoenquadramentoipi;
     @ApiModelProperty(value = "Campo que armazena a origem do produto. Deve ser o valor da SEFAZ para o campo ORIG do imposto do item da Nfe",
             position = 3)
     public Integer origemdoproduto;

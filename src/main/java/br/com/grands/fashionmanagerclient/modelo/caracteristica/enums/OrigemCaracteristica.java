@@ -8,7 +8,6 @@ public enum OrigemCaracteristica {
 
     private final String mobiageName;
 
-
     OrigemCaracteristica(String mobiageName) {
         this.mobiageName = mobiageName;
     }
@@ -29,6 +28,12 @@ public enum OrigemCaracteristica {
         return null;
     }
 
-
+    public static OrigemCaracteristica findByName(String name) {
+        for (OrigemCaracteristica s : OrigemCaracteristica.values()) {
+            if (name.equalsIgnoreCase(s.getName()))
+                return s;
+        }
+        return null;
+    }
 
 }
