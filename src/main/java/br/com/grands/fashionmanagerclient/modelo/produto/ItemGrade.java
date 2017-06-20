@@ -1,5 +1,6 @@
 package br.com.grands.fashionmanagerclient.modelo.produto;
 
+import br.com.grands.fashionmanagerclient.modelo.foto.Foto;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.math.BigDecimal;

@@ -1,5 +1,6 @@
 package br.com.grands.fashionmanagerclient.modelo.produto;
 
+import br.com.grands.fashionmanagerclient.modelo.foto.Foto;
 import br.com.grands.fashionmanagerclient.modelo.produto.enums.TipoBarras;
 import io.swagger.annotations.ApiModelProperty;
 
