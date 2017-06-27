@@ -1,5 +1,7 @@
 package br.com.grands.fashionmanagerclient.modelo.vendanova;
 
+
+import br.com.grands.fashionmanagerclient.modelo.vendanova.enums.TipoPagamento;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.math.BigDecimal;
@@ -21,22 +23,27 @@ public class Pagamento {
     @ApiModelProperty(value = "Flag que indica se o pagamento já foi realizado. O valor padrão desse campo é falso.")
     public Boolean pago = Boolean.FALSE;
 
+    @ApiModelProperty(value = "Campo que indica se o pagamento é uma parcela ou uma entrada", required = true)
+    public TipoPagamento tipo;
+
 
     public Pagamento() {
     }
 
-    public Pagamento(Long idintegracao, Integer numero, Long idformapagamento, BigDecimal valor) {
+    public Pagamento(Long idintegracao, Integer numero, Long idformapagamento, BigDecimal valor, TipoPagamento tipo) {
         this.idintegracao = idintegracao;
         this.numero = numero;
         this.idformapagamento = idformapagamento;
         this.valor = valor;
+        this.tipo = tipo;
     }
 
-    public Pagamento(Long idintegracao, Integer numero, Long idformapagamento, BigDecimal valor, Boolean pago) {
+    public Pagamento(Long idintegracao, Integer numero, Long idformapagamento, BigDecimal valor, Boolean pago, TipoPagamento tipo) {
         this.idintegracao = idintegracao;
         this.numero = numero;
         this.idformapagamento = idformapagamento;
         this.valor = valor;
         this.pago = pago;
+        this.tipo = tipo;
     }
 }
