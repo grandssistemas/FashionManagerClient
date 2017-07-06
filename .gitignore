@@ -5,3 +5,4 @@
 /FashionManagerClient.iml
 /**/src/main/resources/rebel.xml
 *.iml
+**/*.xml.*
