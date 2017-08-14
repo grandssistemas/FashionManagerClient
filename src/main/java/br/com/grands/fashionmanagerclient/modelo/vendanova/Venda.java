@@ -3,6 +3,7 @@ package br.com.grands.fashionmanagerclient.modelo.vendanova;
 import br.com.grands.fashionmanagerclient.modelo.pessoa.Marcador;
 import br.com.grands.fashionmanagerclient.modelo.pessoa.Pessoa;
 import br.com.grands.fashionmanagerclient.modelo.vendanova.enums.StatusVenda;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.util.Date;
@@ -18,9 +19,11 @@ public class Venda {
     public Long numpedido;
 
     @ApiModelProperty(value = "Data da realizacao da venda", required = true)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy HH:mm")
     public Date dataemissao;
 
     @ApiModelProperty(value = "Data da entrega da venda")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy HH:mm")
     public Date dataentrega;
 
     @ApiModelProperty("Lista com os ids dos vendedores responsáveis pela venda")

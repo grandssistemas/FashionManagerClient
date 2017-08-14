@@ -2,9 +2,11 @@ package br.com.grands.fashionmanagerclient.modelo.vendanova;
 
 
 import br.com.grands.fashionmanagerclient.modelo.vendanova.enums.TipoPagamento;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.math.BigDecimal;
+import java.util.Date;
 
 public class Pagamento {
 
@@ -26,6 +28,10 @@ public class Pagamento {
     @ApiModelProperty(value = "Campo que indica se o pagamento é uma parcela ou uma entrada", required = true)
     public TipoPagamento tipo;
 
+    @ApiModelProperty(value = "Campo que indica a data do pagamento, caso ele tenha sido pago anteriormente")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy HH:mm")
+    public Date dataPagamento;
+
 
     public Pagamento() {
     }
@@ -38,12 +44,13 @@ public class Pagamento {
         this.tipo = tipo;
     }
 
-    public Pagamento(Long idintegracao, Integer numero, Long idformapagamento, BigDecimal valor, Boolean pago, TipoPagamento tipo) {
+    public Pagamento(Long idintegracao, Integer numero, Long idformapagamento, BigDecimal valor, Boolean pago, TipoPagamento tipo, Date dataPagamento) {
         this.idintegracao = idintegracao;
         this.numero = numero;
         this.idformapagamento = idformapagamento;
         this.valor = valor;
         this.pago = pago;
         this.tipo = tipo;
+        this.dataPagamento = dataPagamento;
     }
 }
