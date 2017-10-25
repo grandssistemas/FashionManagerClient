@@ -16,5 +16,5 @@ public class Foto {
     @ApiModelProperty(value = "Caso seja fornecida uma URL")
     public String imagemurl;
     @ApiModelProperty(value = "Id do arquivo no storage")
-    public Long idstorage;
+    public String idstorage;
 }
